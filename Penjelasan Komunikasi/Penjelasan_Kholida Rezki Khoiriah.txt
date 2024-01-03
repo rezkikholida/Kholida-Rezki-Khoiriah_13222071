@@ -1,0 +1,33 @@
+Komunikasi
+
+Berdasarkan arahnya, komunikasi data dapat dibedakan menjadi tiga jenis, sebagai berikut.
+
+1. Simplex
+Pada mode Simplex, komunikasi data hanya dapat dijalankan secara satu arah. Salah satu perangkat hanya dapat mengirim data dan perangkat lainnya hanya dapat menerima data. Contoh: radio AM/FM (stasiun radio sebagai pengirim data dan pendengar sebagai penerima data)
+
+2. Half-Duplex
+Pada mode Half-Duplex, komunikasi data berjalan secara dua arah, tapi bergantian. Hanya satu perangkat yang dapat mengirimkan atau menerima data pada satu waktu. Kedua perangkat harus bergantin untuk mengirim dan menerima data. Contoh: Walkie-Talkie
+
+3. Full-Duplex
+Pada mode Full-Duplex, komunikasi data berjalan secara dua arah. Kedua perangkat dapat menerima sekaligus mengirim data pada waku yang bersamaan. Hal ini bisa terjadi karena jalur atau jaringannya berbeda. Misalnya pada jalur pertama perangkat 1 mengirim data dan perangkat 2 menerima data, sedangkan pada jalur kedua perangkat 1 menerima data dan perangkat 2 mengirim data. COntoh: telepon.
+
+
+Selanjutnya, terdapat beberapa protokol komunikasi serial yang digunakan untuk menghubungkan perangkat elektronik sebagai berikut.
+
+1. I2C (Inter-Integrated Circuit)
+Pada komunikasi I2C terdapat master dan slave. Master adalah perangkat yang mengontrol komunikasi. Master bertanggung jawab untuk memulai dan menghentikan komunikasi, serta mengirim dan menerima data. Slave adalah perangkat yang mengikuti instruksi master. I2C merupakan protokol sederhana dan efisien untuk menghubungkan perangkat pada jarak pendek, misalnya pada board dan chip yang sama. I2C memiliki 2 pin, yaitu SDA (serial data) dan SCL (serial clock).
+
+2. SPI (Serial Peripheral Interface)
+Pada SPI juga terdapat Master dan Slave. SPI merupakan protokol komunikasi serial yang lebih kompleks dari I2C, namun memiliki kecepatan yang lebih tinggi dari I2C. Hal ini bisa terjadi karena tidak adanya interupsi pada pengiriman data akibat start/stop bit, serta pemisahan MISO dan MOSI yang memungkinkan pengiriman data dari master dan slave secara bersamaan. SPI memiliki 4 pin yaitu MOSI (Master Input/Slave Output), MISO (Master Output/Slave Input), SCLK (Sumber CLock), dan SS/CS (Slave Select/Chip Select)
+
+3. UART (Universal Asynchronous Receiver Transmitter)
+UART merupakan protokol komunikasi serial yang digunakan untuk menghubungkan perangkat elektronik secara point-to-point. UART memnungkinkan komunikasi serial asinkron dengan kecepatan yang dapat dikonfigurasi. Protokol ini menggunakan dua pin, yaitu TX (transmit) dan RX (receive). UART bisa Half-Duplex atau Full-Duplex.
+
+4. CAN (Controller Area Network)
+CAN merupakan protokol komunikasi serial yang dirancang untuk komunikasi robust dalam sistem terdistribusi. Komunikasi robust ialah komunikasi yang tahan terhadap gangguan dan kesalahan. Protokol ini menggunakan kabel twisted-pair dan protokol multi-master. Protokol ini cocok untuk aplikasi yang memerlukan pengiriman data real-time dan kontrol antar modul dalam sistem kompleks. Protokol ini dapat memiliki pin sebanyak 2 atau lebih.
+
+5. 1-Wire 
+1-Wire merupakan protokol komunikasi yang sederhana dan hemat daya yang dirancang untuk menghubungkan perangkat dengan jumlah pin yang terbatas. Komunikasi antar dua perangkat dengan protokol ini hanya menggunakan 1 kabel. Setiap perangkat memiliki nomor unik sehingga perangkat lain dapat terhubung dengan perangkat tersebut. Perangkat ini bisa mendapatkan daya dari kabel data itu sendiri, sehingga tidak memerlukan sumber daya tambahan.
+
+6. Modbus
+Pada Modbus juga terdapat Master dan Slave. Modbus merupakan cara komunikasi yang biasa digunakan oleh perangkat kontrol otomatis. Modbus digunakan untuk komunikasi antara banyak perangkat dalam satu jaringan. Modbus bisa digunakan melalui kabel (RTU dan ASCII) atau melalui jaringan internet (TCP/IP).
